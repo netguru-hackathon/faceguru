@@ -10,5 +10,4 @@ Router.map ->
       @resource "reviews", path: 'reviews', ->
         @route 'show', path: ':review_id'
 
-
 `export default Router`

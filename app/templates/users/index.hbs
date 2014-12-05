@@ -5,19 +5,11 @@
     <th>Position</th>
     <th>Last Review</th>
   </tr>
-  <tr>
-    <td>{{#link-to 'users.show' 1 }} Jan Kran {{/link-to}}</td>
-    <td>Junior Dev</td>
-    <td>2012-10-12</td>
-  </tr>
-  <tr>
-    <td>{{#link-to 'users.show' 2 }} Zygmunt Żołądź {{/link-to}}</td>
-    <td>Dev</td>
-    <td>2013-04-12</td>
-  </tr>
-  <tr>
-    <td>{{#link-to 'users.show' 3 }} Ksawery Jemioła {{/link-to}}</td>
-    <td>CTO</td>
-    <td>2013-01-12</td>
-  </tr>
+  {{#each user in model}}
+    <tr>
+      <td>{{#link-to 'users.show' user.id}} {{user.fullName}} {{/link-to}}</td>
+      <td>{{user.position}}</td>
+      <td>{{user.lastReview}}</td>
+    </tr>
+  {{/each}}
 </table>
