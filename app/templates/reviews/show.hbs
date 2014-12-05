@@ -1,0 +1,15 @@
+<form {{action "updateReview" model on="submit"}}>
+
+  {{review-cell id='communication' property=model.communication label="Communication"}}
+  {{review-cell id='organization' property=model.organization label="Organization"}}
+  {{review-cell id='backend' property=model.backend label="Backend"}}
+  {{review-cell id='frontendSpa' property=model.frontendSpa label="Frontend SPA"}}
+  {{review-cell id='frontendDesign' property=model.frontendDesign label="Frontend design"}}
+  {{review-cell id='feedback' property=model.feedback label="Feedback"}}
+  {{review-cell id='selfImprovement' property=model.selfImprovement label="Self improvement"}}
+  {{review-cell id='serverAdministration' property=model.serverAdministration label="Server administration"}}
+  {{review-cell id='leadership' property=model.leadership label="Leadership"}}
+  {{review-cell id='flow' property=model.flow label="Flow"}}
+
+  <button class="btn btn-primary btn-block" type="submit">Save</button>
+</form>
