@@ -3,6 +3,7 @@
 ReviewsShowController = Ember.Controller.extend
   actions:
     updateReview: (arg) ->
-      arg.save()
+      alert('success')
+
 
 `export default ReviewsShowController`
