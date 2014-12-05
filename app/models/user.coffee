@@ -1,14 +1,14 @@
 `import DS from 'ember-data'`
 
-User = DS.Model.extend {
+User = DS.Model.extend
+  firstName: DS.attr 'string'
+  lastName: DS.attr 'string'
+  position: DS.attr 'string'
+  lastReview: DS.attr 'string'
+
   fullName: (->
     "#{@get('firstName')} #{@get('lastName')}"
-  ).property('firstName', 'lastName'),
-  firstName: DS.attr 'string',
-  lastName: DS.attr 'string',
-  position: DS.attr 'string',
-  lastReview: DS.attr 'string'
-}
+  ).property('firstName', 'lastName')
 
 User.reopenClass {
   FIXTURES: [
