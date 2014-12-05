@@ -5,7 +5,6 @@ User = DS.Model.extend
   lastName: DS.attr 'string'
   position: DS.attr 'string'
   lastReview: DS.attr 'string'
-  reviews: DS.hasMany 'review', async: true
 
   fullName: (->
     "#{@get('firstName')} #{@get('lastName')}"
@@ -15,32 +14,31 @@ User.reopenClass {
   FIXTURES: [
     {
       id: 1,
-      firstName: 'Steve',
+      firstName: 'Second',
       lastName: 'Stevenson',
       position: 'Dev',
-      lastReview: '10/10/2014'
-      reviews: [100]
+      lastReview: new Date(2014,10,11)
     },
     {
       id: 2,
-      firstName: 'Dave',
+      firstName: 'Third',
       lastName: 'Davidson',
       position: 'QA',
-      lastReview: '10/10/2014'
+      lastReview: new Date(2014,10,12)
     },
     {
       id: 3,
-      firstName: 'John',
+      firstName: 'Forth',
       lastName: 'Johnson',
       position: 'Sales',
-      lastReview: '10/10/2014'
+      lastReview: new Date(2014,10,13)
     },
     {
       id: 4,
-      firstName: 'Eric',
+      firstName: 'First',
       lastName: 'Ericsson',
       position: 'Senior dev',
-      lastReview: '10/10/2014'
+      lastReview: new Date(2014,10,10)
     },
   ]
 }

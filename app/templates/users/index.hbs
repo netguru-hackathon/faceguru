@@ -1,15 +1,16 @@
 <h1>Team Stonoga</h1>
+{{input type='text' value=filter placeholder='firstname or lastname'}}
 <table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Position</th>
-    <th>Last Review</th>
+    <th {{action 'sortBy' 'lastReview'}}>Last Review</th>
   </tr>
-  {{#each user in model}}
+  {{#each filteredContent}}
     <tr>
-      <td>{{#link-to 'users.show' user.id}} {{user.fullName}} {{/link-to}}</td>
-      <td>{{user.position}}</td>
-      <td>{{user.lastReview}}</td>
+      <td>{{#link-to 'users.show' id}} {{fullName}} {{/link-to}}</td>
+      <td>{{position}}</td>
+      <td>{{lastReview}}</td>
     </tr>
   {{/each}}
 </table>
