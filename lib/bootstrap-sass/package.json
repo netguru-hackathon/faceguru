@@ -1,0 +1,7 @@
+{
+  "name": "bootstrap-sass",
+  "main": "index.js",
+  "keywords": [
+    "ember-addon"
+  ]
+}
