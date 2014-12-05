@@ -1,0 +1,22 @@
+<h1>{{model.fullName}}</h1>
+
+<div class="row">
+  <div class="col-md-2">
+    <h4>Reviews</h2>
+    <table class="table text-center">
+      <tbody>
+        {{#each review in model.reviews}}
+          <tr>
+            <td>
+              {{#link-to 'reviews.show' review.id }} {{review.date}} {{/link-to}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <button type="button" {{action "createReview"}} class="btn btn-default">Add new</button>
+  </div>
+  <div class="col-md-10">
+    {{outlet}}
+  </div>
+</div>
