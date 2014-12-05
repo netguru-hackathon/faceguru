@@ -8,7 +8,7 @@
         {{#each review in model.reviews}}
           <tr>
             <td>
-              {{#link-to 'reviews.show' review.id }} {{format-date review.date}} {{/link-to}}
+              {{#link-to 'reviews.show' review.id }} {{format-date review.createdAt}} {{/link-to}}
             </td>
           </tr>
         {{else}}

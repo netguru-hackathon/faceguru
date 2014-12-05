@@ -1,7 +1,7 @@
 `import DS from 'ember-data'`
 
 Review = DS.Model.extend
-  date: DS.attr 'date'
+  createdAt: DS.attr 'date'
   user: DS.belongsTo 'user'
   communication: DS.attr 'string'
   organization: DS.attr 'string'

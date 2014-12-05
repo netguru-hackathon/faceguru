@@ -1,11 +1,11 @@
 `import Ember from 'ember'`
 
 ReviewsRoute = Ember.Route.extend
-  actions: 
+  actions:
     createReview: ->
       review = @store.createRecord('review',
         user: this.modelFor('users/show')
-        date: new Date()
+        createdAt: new Date()
       ).save()
       @transitionTo('reviews.show', review)
 
