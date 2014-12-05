@@ -1,6 +1,9 @@
 `import Ember from 'ember'`
 
 UsersIndexController = Ember.ArrayController.extend
+  sortAscending: false,
+  sortProperties: ['lastReview'],
+
   filter: '',
 
   filteredContent: (->
