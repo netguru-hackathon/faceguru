@@ -12,7 +12,7 @@ UsersIndexController = Ember.ArrayController.extend
     users = this.get('arrangedContent');
 
     return users.filter (user) ->
-      return user.get('firstName').match(rx) || user.get('lastName').match(rx)
+      return user.get('fullName').match(rx)
 
   ).property('arrangedContent', 'filter'),
 
