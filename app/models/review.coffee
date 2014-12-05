@@ -18,7 +18,7 @@ Review.reopenClass {
   FIXTURES: [
     {
       id: 100
-      date: "Fri Dec 05 2014 16:19:36 GMT+0100 (CET)"
+      createdAt: "Fri Dec 05 2014 16:19:36 GMT+0100 (CET)"
       user: 1
       communication: "All good"
       organization: "Could be better"
