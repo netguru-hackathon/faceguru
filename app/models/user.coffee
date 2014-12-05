@@ -5,6 +5,7 @@ User = DS.Model.extend
   lastName: DS.attr 'string'
   position: DS.attr 'string'
   lastReview: DS.attr 'string'
+  reviews: DS.hasMany 'review', async: true
 
   fullName: (->
     "#{@get('firstName')} #{@get('lastName')}"
@@ -18,6 +19,7 @@ User.reopenClass {
       lastName: 'Stevenson',
       position: 'Dev',
       lastReview: new Date(2014,10,11)
+      reviews: [100]
     },
     {
       id: 2,
