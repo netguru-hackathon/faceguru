@@ -8,9 +8,12 @@
         {{#each review in model.reviews}}
           <tr>
             <td>
-              {{#link-to 'reviews.show' review.id }} {{review.date}} {{/link-to}}
+              {{#link-to 'reviews.show' review.id }} {{format-date review.date}} {{/link-to}}
             </td>
           </tr>
+        {{else}}
+          <h1>No reviews</h1>
+          <p>Someone's been slacking</p>
         {{/each}}
       </tbody>
     </table>
